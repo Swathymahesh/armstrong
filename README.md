@@ -56,19 +56,21 @@ This is a full-stack application that:
 
 ## API Endpoints 
     Base URL: http://localhost:8080
-    
+
+**Registers a new user.**
+
 ```POST /register```
 
-Registers a new user.
+**Verifies if a given number is Armstrong for a specific user and saves it.**
 
 ```POST /verify```
 
-Verifies if a given number is Armstrong for a specific user and saves it.
+**Fetches all Armstrong numbers associated with the given user ID.**
 
 ```GET /user/{id}/numbers```
 
-Fetches all Armstrong numbers associated with the given user ID.
+**Fetches all users along with their Armstrong numbers.**
 
 ```GET /users```
 
-Fetches all users along with their Armstrong numbers.
+
