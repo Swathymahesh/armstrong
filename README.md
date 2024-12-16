@@ -11,15 +11,10 @@ This is a full-stack application that:
 
 - [Prerequisites](#prerequisites)
 - [Project Structure](#project-structure)
-- [Backend Setup](#backend-setup)
-  - [Database Configuration](#database-configuration)
-  - [Environment Variables](#environment-variables)
-  - [Running Migrations](#running-migrations)
-  - [Running the Backend](#running-the-backend)
-- [Frontend Setup](#frontend-setup)
+- [Backend Setup](#running-the-backend)
+- [Frontend Setup](#running-the-frontend)
 - [API Endpoints](#api-endpoints)
-- [Testing the Project](#testing-the-project)
-- [Additional Notes](#additional-notes)
+
 
 ---
 
@@ -48,10 +43,12 @@ This is a full-stack application that:
 ## Running the Frontend
 
 1. **Navigate to the frontend directory:**
+   
     ```cd frontend```
 2. **Install frontend dependencies**
     ```npm install```
-3. **Start the React development server**
+   
+4. **Start the React development server**
     ```npm start``
 
 
