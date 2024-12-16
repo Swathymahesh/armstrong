@@ -43,7 +43,6 @@ This is a full-stack application that:
     ```bash
     go run main.go
 
-
 ## Running the Frontend
 
 1. **Navigate to the frontend directory:**
@@ -57,7 +56,6 @@ This is a full-stack application that:
 4. **Start the React development server**
     ```bash
    npm start
-
 
 ## API Endpoints 
     Base URL: http://localhost:8080
