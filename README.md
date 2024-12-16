@@ -28,31 +28,35 @@ This is a full-stack application that:
   - Appropriate credentials (username, password).
   - A created database for this project.
 
+
 ## Running the Backend
 
 1. **Navigate to the backend directory:**
-    ```cd armstrong-webapp```
+    ```bash
+    cd armstrong-webapp
 
 2. **Install Go dependencies**
-    ```go mod tidy```
+    ```bash
+   go mod tidy
 
-3. **Run the backend server**
-    ```go run main.go```
+4. **Run the backend server**
+    ```bash
+    go run main.go
 
 
 ## Running the Frontend
 
 1. **Navigate to the frontend directory:**
-   
     ```bash
    cd frontend```
+    
 3. **Install frontend dependencies**
-   
-    ```npm install```
+    ```bash
+    npm install
    
 4. **Start the React development server**
-   
-    ```npm start```
+    ```bash
+   npm start
 
 
 ## API Endpoints 
