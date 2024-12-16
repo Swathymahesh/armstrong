@@ -48,7 +48,7 @@ This is a full-stack application that:
 
 1. **Navigate to the frontend directory:**
     ```bash
-   cd frontend```
+   cd frontend
     
 3. **Install frontend dependencies**
     ```bash
