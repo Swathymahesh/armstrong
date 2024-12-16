@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Armstrong Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack application that:
 
-## Available Scripts
+1. Registers users and stores their information in a MySQL database.
+2. Verifies if a given number is an Armstrong number and stores verified numbers associated with a user.
+3. Retrieves Armstrong numbers for specific users.
+4. Displays all users and their Armstrong numbers in a global dashboard.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Prerequisites](#prerequisites)
+- [Project Structure](#project-structure)
+- [Backend Setup](#backend-setup)
+  - [Database Configuration](#database-configuration)
+  - [Environment Variables](#environment-variables)
+  - [Running Migrations](#running-migrations)
+  - [Running the Backend](#running-the-backend)
+- [Frontend Setup](#frontend-setup)
+- [API Endpoints](#api-endpoints)
+- [Testing the Project](#testing-the-project)
+- [Additional Notes](#additional-notes)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+- **Go** (version 1.18 or above recommended): [Download Go](https://go.dev/dl/)
+- **Node.js and npm** (for the frontend React application): [Download Node.js](https://nodejs.org/)
+- **MySQL Database**:  
+  Ensure you have:
+  - A running MySQL instance.
+  - Appropriate credentials (username, password).
+  - A created database for this project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Running the Backend
 
-### `npm run build`
+1. **Navigate to the backend directory:**
+    cd armstrong-webapp
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install Go dependencies**
+    go mod tidy
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Run the backend server**
+    go run main.go
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Running the Frontend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Navigate to the frontend directory:**
+    cd frontend
+2. **Install frontend dependencies**
+    npm install
+3. **Start the React development server**
+    npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Endpoints 
+    Base URL: http://localhost:8080
+    OST /register
+Registers a new user.
+Body: { "email": "user@example.com" }
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+POST /verify
+Verifies if a given number is Armstrong for a specific user and saves it.
+Body: { "user_id": 1, "number": 153 }
 
-## Learn More
+GET /user/{id}/numbers
+Fetches all Armstrong numbers associated with the given user ID.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GET /users
+Fetches all users along with their Armstrong numbers.
