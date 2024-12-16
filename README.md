@@ -46,23 +46,29 @@ This is a full-stack application that:
    
     ```cd frontend```
 2. **Install frontend dependencies**
+   
     ```npm install```
    
-4. **Start the React development server**
-    ```npm start``
+3. **Start the React development server**
+   
+    ```npm start```
 
 
 ## API Endpoints 
     Base URL: http://localhost:8080
     
 ```POST /register```
+
 Registers a new user.
 
 ```POST /verify```
+
 Verifies if a given number is Armstrong for a specific user and saves it.
 
 ```GET /user/{id}/numbers```
+
 Fetches all Armstrong numbers associated with the given user ID.
 
 ```GET /users```
+
 Fetches all users along with their Armstrong numbers.
