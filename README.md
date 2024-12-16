@@ -44,12 +44,13 @@ This is a full-stack application that:
 
 1. **Navigate to the frontend directory:**
    
-    ```cd frontend```
-2. **Install frontend dependencies**
+    ```bash
+   cd frontend```
+3. **Install frontend dependencies**
    
     ```npm install```
    
-3. **Start the React development server**
+4. **Start the React development server**
    
     ```npm start```
 
