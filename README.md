@@ -36,37 +36,36 @@ This is a full-stack application that:
 ## Running the Backend
 
 1. **Navigate to the backend directory:**
-    cd armstrong-webapp
+    ```cd armstrong-webapp```
 
 2. **Install Go dependencies**
-    go mod tidy
+    ```go mod tidy```
 
 3. **Run the backend server**
-    go run main.go
+    ```go run main.go```
 
 
 ## Running the Frontend
 
 1. **Navigate to the frontend directory:**
-    cd frontend
+    ```cd frontend```
 2. **Install frontend dependencies**
-    npm install
+    ```npm install```
 3. **Start the React development server**
-    npm start
+    ```npm start``
 
 
 ## API Endpoints 
     Base URL: http://localhost:8080
-    OST /register
+    
+```POST /register```
 Registers a new user.
-Body: { "email": "user@example.com" }
 
-POST /verify
+```POST /verify```
 Verifies if a given number is Armstrong for a specific user and saves it.
-Body: { "user_id": 1, "number": 153 }
 
-GET /user/{id}/numbers
+```GET /user/{id}/numbers```
 Fetches all Armstrong numbers associated with the given user ID.
 
-GET /users
+```GET /users```
 Fetches all users along with their Armstrong numbers.
